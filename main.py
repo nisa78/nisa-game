@@ -17,14 +17,14 @@ def resource_path(relative_path):
 
 
 # Background, Music, Sounds, and Other Images
-asset_url = [resource_path('pics/defaultR1.png'), resource_path('pics/defaultR2.png'),
-             resource_path('pics/defaultR3.png'), resource_path('pics/defaultR4.png'),
-             resource_path('pics/defaultR5.png'), resource_path('pics/defaultR6.png'),
-             resource_path('pics/defaultR7.png'), resource_path('pics/defaultR8.png'),
-             resource_path('pics/defaultR9.png'), resource_path('pics/defaultR10.png'),
-             resource_path('pics/defaultR11.png'), resource_path('pics/defaultR12.png'),
-             resource_path('pics/whitebg2.jpg'), resource_path('music/pew.wav'),
-             resource_path('music/Curtains.mp3')]
+asset_url = [resource_path('assets/images/defaultR1.png'), resource_path('assets/images/defaultR2.png'),
+             resource_path('assets/images/defaultR3.png'), resource_path('assets/images/defaultR4.png'),
+             resource_path('assets/images/defaultR5.png'), resource_path('assets/images/defaultR6.png'),
+             resource_path('assets/images/defaultR7.png'), resource_path('assets/images/defaultR8.png'),
+             resource_path('assets/images/defaultR9.png'), resource_path('assets/images/defaultR10.png'),
+             resource_path('assets/images/defaultR11.png'), resource_path('assets/images/defaultR12.png'),
+             resource_path('assets/images/whitebg2.jpg'), resource_path('assets/audio/pew.wav'),
+             resource_path('assets/audio/Curtains.mp3')]
 
 rotationR = [pygame.image.load(asset_url[0]), pygame.image.load(asset_url[1]),
              pygame.image.load(asset_url[2]), pygame.image.load(asset_url[3]),
@@ -38,7 +38,7 @@ rotationL = [pygame.image.load(asset_url[11]), pygame.image.load(asset_url[10]),
              pygame.image.load(asset_url[5]), pygame.image.load(asset_url[4]),
              pygame.image.load(asset_url[3]), pygame.image.load(asset_url[2]),
              pygame.image.load(asset_url[1]), pygame.image.load(asset_url[0])]
-bg = pygame.image.load(asset_url[12])
+backGround = pygame.image.load(asset_url[12])
 
 bulletSound = pygame.mixer.Sound(asset_url[13])
 bulletSound.set_volume(0.25)
@@ -59,19 +59,19 @@ pygame.display.set_caption("Co-Op")
 
 ''' Before Executable
 # Background, Music, Sounds, and Other Images
-rotationR = [pygame.image.load('pics/defaultR1.png'), pygame.image.load('pics/defaultR2.png'),
-             pygame.image.load('pics/defaultR3.png'), pygame.image.load('pics/defaultR4.png'),
-             pygame.image.load('pics/defaultR5.png'), pygame.image.load('pics/defaultR6.png'),
-             pygame.image.load('pics/defaultR7.png'), pygame.image.load('pics/defaultR8.png'),
-             pygame.image.load('pics/defaultR9.png'), pygame.image.load('pics/defaultR10.png'),
-             pygame.image.load('pics/defaultR11.png'), pygame.image.load('pics/defaultR12.png')]
-rotationL = [pygame.image.load('pics/defaultR12.png'), pygame.image.load('pics/defaultR11.png'),
-             pygame.image.load('pics/defaultR10.png'), pygame.image.load('pics/defaultR9.png'),
-             pygame.image.load('pics/defaultR8.png'), pygame.image.load('pics/defaultR7.png'),
-             pygame.image.load('pics/defaultR6.png'), pygame.image.load('pics/defaultR5.png'),
-             pygame.image.load('pics/defaultR4.png'), pygame.image.load('pics/defaultR3.png'),
-             pygame.image.load('pics/defaultR2.png'), pygame.image.load('pics/defaultR1.png')]
-bg = pygame.image.load('pics/whitebg2.jpg')
+rotationR = [pygame.image.load('assets/images/defaultR1.png'), pygame.image.load('assets/images/defaultR2.png'),
+             pygame.image.load('assets/images/defaultR3.png'), pygame.image.load('assets/images/defaultR4.png'),
+             pygame.image.load('assets/images/defaultR5.png'), pygame.image.load('assets/images/defaultR6.png'),
+             pygame.image.load('assets/images/defaultR7.png'), pygame.image.load('assets/images/defaultR8.png'),
+             pygame.image.load('assets/images/defaultR9.png'), pygame.image.load('assets/images/defaultR10.png'),
+             pygame.image.load('assets/images/defaultR11.png'), pygame.image.load('assets/images/defaultR12.png')]
+rotationL = [pygame.image.load('assets/images/defaultR12.png'), pygame.image.load('assets/images/defaultR11.png'),
+             pygame.image.load('assets/images/defaultR10.png'), pygame.image.load('assets/images/defaultR9.png'),
+             pygame.image.load('assets/images/defaultR8.png'), pygame.image.load('assets/images/defaultR7.png'),
+             pygame.image.load('assets/images/defaultR6.png'), pygame.image.load('assets/images/defaultR5.png'),
+             pygame.image.load('assets/images/defaultR4.png'), pygame.image.load('assets/images/defaultR3.png'),
+             pygame.image.load('assets/images/defaultR2.png'), pygame.image.load('assets/images/defaultR1.png')]
+backGround = pygame.image.load('assets/images/whitebg2.jpg')
 
 bulletSound = pygame.mixer.Sound('music/pew.wav')
 bulletSound.set_volume(0.25)
@@ -138,7 +138,7 @@ class Projectile(object):
 
 
 def redrawGameWindow():
-    win.blit(bg, (0, 0))
+    win.blit(backGround, (0, 0))
     main.draw(win)
     for bullet in bullets:
         bullet.draw(win)
